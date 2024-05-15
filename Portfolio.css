@@ -1,0 +1,396 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Montserrat', Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #e4e2dd;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 40px;
+}
+
+
+header {
+  background-color: #2b2b2b;
+  color: #fff;
+  padding: 60px 0;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-info h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.header-info p {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.header-image img {
+  max-width: 50px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+nav li {
+  margin: 0 30px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #fff;
+  transition: width 0.3s ease;
+}
+
+nav a:hover {
+  color: #e0e0e0;
+}
+
+nav a:hover:before {
+  width: 100%;
+}
+
+
+main {
+  padding: 60px 0;
+}
+
+section {
+  margin-bottom: 60px;
+}
+
+h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 26px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.blog-post {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  transition: transform 0.3s ease;
+}
+
+.blog-post:hover {
+  transform: translateY(-5px);
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.certificate-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+}
+
+.certificate-grid img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.certificate-grid img:hover {
+  transform: translateY(-5px);
+}
+
+.testimonial-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.testimonial {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial:before {
+  content: '"';
+  font-size: 72px;
+  color: #2b2b2b;
+  position: absolute;
+  top: -20px;
+  left: 10px;
+  font-weight: 700;
+  opacity: 0.1;
+}
+
+.testimonial p {
+  font-style: italic;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.testimonial footer {
+  text-align: right;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+
+address {
+  font-style: normal;
+  font-size: 18px;
+}
+
+address p {
+  margin-bottom: 15px;
+}
+
+address a {
+  color: #2b2b2b;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+address a:hover {
+  color: #111;
+}
+.dynamic-logo {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  z-index: 999;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.dynamic-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.dynamic-logo.hide {
+  opacity: 0;
+}
+.header-logo img {
+  max-width: 50px; 
+  height: auto;
+}
+
+
+/* Additional modifications */
+.header-wrapper {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #2b2b2b;
+  z-index: 999;
+}
+
+.header-wrapper header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.header-logo img {
+  max-width: 50px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+nav li {
+  margin: 0 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #fff;
+  transition: width 0.3s ease;
+}
+
+nav a:hover {
+  color: #e0e0e0;
+}
+
+nav a:hover:before {
+  width: 100%;
+}
+
+/* About Me section styles */
+.author-info {
+  background-color: #f2f2f2;
+  padding: 60px 0;
+}
+
+.author-info .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.author-image img {
+  max-width: 500px;
+  max-height: auto;
+  border-radius: 0; /* Remove rounded corners */
+  margin-left: -100px; /* Adjust this value to move the image further to the left */
+  margin-top: 100px; 
+}
+
+.author-details h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  margin-left: 150px;
+}
+
+.author-details p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  margin-left: 150px;
+}
+
+/* Dynamic logo styles */
+.dynamic-logo {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  z-index: 999;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.dynamic-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.dynamic-logo.hide {
+  opacity: 0;
+}
+
+/* Retain certificate grid and hover effect */
+.certificate-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+}
+
+.certificate-grid img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.certificate-grid img:hover {
+  transform: translateY(-5px);
+}
+
+.contact-grid {
+  display: flex;
+  justify-content: center; /* Center align the contact icons */
+  align-items: center;
+}
+
+.contact-grid img {
+  width: 250px; /* Adjusted size for the social media icons */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.gif-container {
+  display: flex;
+  justify-content: center;
+  overflow: hidden; /* Hide overflowing parts of the GIF */
+  margin-top: 20px; /* Add margin on top */
+  margin-bottom: 20px;
+}
+
+.gif-container img {
+  border-radius: 0;
+  width: 45%; /* Make sure the GIF fills its container */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Cut out the corners of the GIF */
+}
